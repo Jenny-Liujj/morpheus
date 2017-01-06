@@ -6,7 +6,7 @@ set :repo_url, "git@example.com:me/my_repo.git"
 set :application, 'morpheus'
 set :repo_url, 'git@github.com:liu7899/morpheus.git'
 set :deploy_user, 'www'
-set :deploy_to, '/var/www/morpheus'
+set :deploy_to, '/home/www/morpheus'
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :pty, true
 

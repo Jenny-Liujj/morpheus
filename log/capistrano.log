@@ -9,3 +9,64 @@
   INFO ---------------------------------------------------------------------------
   INFO [ae5a8251] Running /usr/bin/env mkdir -p /tmp as morpheus@morpheusliu.xyz
  DEBUG [ae5a8251] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:34:22 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [44b82c61] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [44b82c61] Command: /usr/bin/env mkdir -p /tmp
+  INFO [44b82c61] Finished in 12.683 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-morpheus-production-liu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-morpheus-production-liu.sh 100.0%
+  INFO [7e2f9339] Running /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh as www@morpheusliu.xyz
+ DEBUG [7e2f9339] Command: /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh
+  INFO [7e2f9339] Finished in 0.537 seconds with exit status 0 (successful).
+  INFO [995e99fb] Running /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git as www@morpheusliu.xyz
+ DEBUG [995e99fb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git )
+ DEBUG [995e99fb] 	/usr/bin/env: 
+ DEBUG [995e99fb] 	git
+ DEBUG [995e99fb] 	: No such file or directory
+ DEBUG [995e99fb] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:39:35 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [113b275d] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [113b275d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [113b275d] Finished in 4.591 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-morpheus-production-liu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-morpheus-production-liu.sh 100.0%
+  INFO [877067fd] Running /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh as www@morpheusliu.xyz
+ DEBUG [877067fd] Command: /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh
+  INFO [877067fd] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [d36f155d] Running /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git as www@morpheusliu.xyz
+ DEBUG [d36f155d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git )
+ DEBUG [d36f155d] 	/usr/bin/env: git
+ DEBUG [d36f155d] 	: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:43:39 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9f6a7a69] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [9f6a7a69] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9f6a7a69] Finished in 4.300 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:44:27 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [12992a88] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [12992a88] Command: /usr/bin/env mkdir -p /tmp
+  INFO [12992a88] Finished in 2.894 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-morpheus-production-liu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-morpheus-production-liu.sh 100.0%
+  INFO [f817ec99] Running /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh as www@morpheusliu.xyz
+ DEBUG [f817ec99] Command: /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh
+  INFO [f817ec99] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [81319092] Running /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git as www@morpheusliu.xyz
+ DEBUG [81319092] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git )
+ DEBUG [81319092] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [81319092] 	fcd421de8a85c9aaf71d76a1b02b23e9aa0bd135
+ DEBUG [81319092] 		
+ DEBUG [81319092] 	refs/heads/master
+ DEBUG [81319092] 	
+  INFO [81319092] Finished in 5.602 seconds with exit status 0 (successful).
+  INFO [f01c6a7d] Running /usr/bin/env mkdir -p /var/www/morpheus/shared /var/www/morpheus/releases as www@morpheusliu.xyz
+ DEBUG [f01c6a7d] Command: /usr/bin/env mkdir -p /var/www/morpheus/shared /var/www/morpheus/releases
+ DEBUG [f01c6a7d] 	mkdir: cannot create directory ‘/var/www’: Permission denied
+mkdir: cannot create directory ‘/var/www’: Permission denied
