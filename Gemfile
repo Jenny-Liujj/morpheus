@@ -17,6 +17,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "capistrano", "~> 3.7"
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
