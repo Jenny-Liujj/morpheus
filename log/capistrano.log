@@ -1,0 +1,11 @@
+# Logfile created on 2017-01-06 17:28:42 +0800 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:28:42 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ad4a782a] Running /usr/bin/env mkdir -p /tmp as morpheus@morpheusliu.xyz
+ DEBUG [ad4a782a] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:32:26 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ae5a8251] Running /usr/bin/env mkdir -p /tmp as morpheus@morpheusliu.xyz
+ DEBUG [ae5a8251] Command: /usr/bin/env mkdir -p /tmp
