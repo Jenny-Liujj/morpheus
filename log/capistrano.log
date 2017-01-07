@@ -70,3 +70,34 @@
  DEBUG [f01c6a7d] Command: /usr/bin/env mkdir -p /var/www/morpheus/shared /var/www/morpheus/releases
  DEBUG [f01c6a7d] 	mkdir: cannot create directory ‘/var/www’: Permission denied
 mkdir: cannot create directory ‘/var/www’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-06 17:50:10 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [086b993a] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [086b993a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [086b993a] Finished in 2.661 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-morpheus-production-liu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-morpheus-production-liu.sh 100.0%
+  INFO [f24ed23b] Running /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh as www@morpheusliu.xyz
+ DEBUG [f24ed23b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh
+  INFO [f24ed23b] Finished in 0.540 seconds with exit status 0 (successful).
+  INFO [c8b3a9b7] Running /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git as www@morpheusliu.xyz
+ DEBUG [c8b3a9b7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git )
+ DEBUG [c8b3a9b7] 	3af0ff842d906dc84c1a3d27f7967c095642ffab
+ DEBUG [c8b3a9b7] 		
+ DEBUG [c8b3a9b7] 	refs/heads/master
+ DEBUG [c8b3a9b7] 	
+  INFO [c8b3a9b7] Finished in 6.608 seconds with exit status 0 (successful).
+  INFO [d799f43e] Running /usr/bin/env mkdir -p /home/www/morpheus/shared /home/www/morpheus/releases as www@morpheusliu.xyz
+ DEBUG [d799f43e] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared /home/www/morpheus/releases
+  INFO [d799f43e] Finished in 0.249 seconds with exit status 0 (successful).
+  INFO [c10de010] Running /usr/bin/env mkdir -p /home/www/morpheus/shared/log /home/www/morpheus/shared/tmp/pids /home/www/morpheus/shared/tmp/cache /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/shared/public/system as www@morpheusliu.xyz
+ DEBUG [c10de010] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared/log /home/www/morpheus/shared/tmp/pids /home/www/morpheus/shared/tmp/cache /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/shared/public/system
+  INFO [c10de010] Finished in 0.218 seconds with exit status 0 (successful).
+  INFO [d624d9eb] Running /usr/bin/env mkdir -p /home/www/morpheus/shared/config as www@morpheusliu.xyz
+ DEBUG [d624d9eb] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared/config
+  INFO [d624d9eb] Finished in 0.231 seconds with exit status 0 (successful).
+ DEBUG [23eae48b] Running [ -f /home/www/morpheus/shared/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [23eae48b] Command: [ -f /home/www/morpheus/shared/config/database.yml ]
+ DEBUG [23eae48b] Finished in 0.218 seconds with exit status 1 (failed).
+ ERROR linked file /home/www/morpheus/shared/config/database.yml does not exist on morpheusliu.xyz

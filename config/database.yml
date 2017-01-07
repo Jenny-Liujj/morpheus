@@ -7,15 +7,15 @@ default: &default
 
 development:
   <<: *default
-  database: frame_development
+  database: morpheus_development
 
 
 test:
   <<: *default
-  database: frame_test
+  database: morpheus_test
 
 production:
   <<: *default
-  database: frame_production
+  database: morpheus_production
   username: frame
   password: <%= ENV['FRAME_DATABASE_PASSWORD'] %>
