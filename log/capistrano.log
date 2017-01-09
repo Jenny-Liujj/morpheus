@@ -689,3 +689,398 @@ mkdir: cannot create directory ‘/var/www’: Permission denied
   INFO [54cc832c] Running /usr/bin/env echo "Branch master (at 2aee50dfd459ca048a58e84dc98b167ede82e10a) deployed as release 20170107101533 by liu" >> /home/www/morpheus/revisions.log as www@morpheusliu.xyz
  DEBUG [54cc832c] Command: cd /home/www/morpheus/releases && /usr/bin/env echo "Branch master (at 2aee50dfd459ca048a58e84dc98b167ede82e10a) deployed as release 20170107101533 by liu" >> /home/www/morpheus/revisions.log
   INFO [54cc832c] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-09 11:23:39 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [61b1e71f] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [61b1e71f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [61b1e71f] Finished in 4.975 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-morpheus-production-liu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-morpheus-production-liu.sh 100.0%
+  INFO [78c57b2b] Running /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh as www@morpheusliu.xyz
+ DEBUG [78c57b2b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh
+  INFO [78c57b2b] Finished in 0.352 seconds with exit status 0 (successful).
+  INFO [61d8b2f9] Running /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git as www@morpheusliu.xyz
+ DEBUG [61d8b2f9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git )
+ DEBUG [61d8b2f9] 	804b20d19db2953843d52d96b4b9ce30aa4f8854	refs/heads/master
+  INFO [61d8b2f9] Finished in 7.240 seconds with exit status 0 (successful).
+  INFO [fe42fc01] Running /usr/bin/env mkdir -p /home/www/morpheus/shared /home/www/morpheus/releases as www@morpheusliu.xyz
+ DEBUG [fe42fc01] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared /home/www/morpheus/releases
+  INFO [fe42fc01] Finished in 0.355 seconds with exit status 0 (successful).
+  INFO [f2c32b51] Running /usr/bin/env mkdir -p /home/www/morpheus/shared/log /home/www/morpheus/shared/tmp/pids /home/www/morpheus/shared/tmp/cache /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/shared/public/system as www@morpheusliu.xyz
+ DEBUG [f2c32b51] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared/log /home/www/morpheus/shared/tmp/pids /home/www/morpheus/shared/tmp/cache /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/shared/public/system
+  INFO [f2c32b51] Finished in 0.361 seconds with exit status 0 (successful).
+  INFO [cb905f34] Running /usr/bin/env mkdir -p /home/www/morpheus/shared/config as www@morpheusliu.xyz
+ DEBUG [cb905f34] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared/config
+  INFO [cb905f34] Finished in 0.359 seconds with exit status 0 (successful).
+ DEBUG [c9bb957a] Running [ -f /home/www/morpheus/shared/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [c9bb957a] Command: [ -f /home/www/morpheus/shared/config/database.yml ]
+ DEBUG [c9bb957a] Finished in 0.353 seconds with exit status 0 (successful).
+ DEBUG [56ae7000] Running [ -f /home/www/morpheus/shared/config/secrets.yml ] as www@morpheusliu.xyz
+ DEBUG [56ae7000] Command: [ -f /home/www/morpheus/shared/config/secrets.yml ]
+ DEBUG [56ae7000] Finished in 0.353 seconds with exit status 0 (successful).
+ DEBUG [b2792dbf] Running [ -f /home/www/morpheus/shared/config/settings.yml ] as www@morpheusliu.xyz
+ DEBUG [b2792dbf] Command: [ -f /home/www/morpheus/shared/config/settings.yml ]
+ DEBUG [b2792dbf] Finished in 0.355 seconds with exit status 0 (successful).
+ DEBUG [a09c6a74] Running [ -f /home/www/morpheus/current/REVISION ] as www@morpheusliu.xyz
+ DEBUG [a09c6a74] Command: [ -f /home/www/morpheus/current/REVISION ]
+ DEBUG [a09c6a74] Finished in 0.370 seconds with exit status 0 (successful).
+ DEBUG [120cbc70] Running /usr/bin/env cat /home/www/morpheus/current/REVISION 2>/dev/null as www@morpheusliu.xyz
+ DEBUG [120cbc70] Command: /usr/bin/env cat /home/www/morpheus/current/REVISION 2>/dev/null
+ DEBUG [120cbc70] 	2aee50dfd459ca048a58e84dc98b167ede82e10a
+ DEBUG [120cbc70] Finished in 0.357 seconds with exit status 0 (successful).
+ DEBUG [6ee7c439] Running [ -f /home/www/morpheus/repo/HEAD ] as www@morpheusliu.xyz
+ DEBUG [6ee7c439] Command: [ -f /home/www/morpheus/repo/HEAD ]
+ DEBUG [6ee7c439] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/www/morpheus/repo
+ DEBUG [94a525c0] Running if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [94a525c0] Command: if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi
+ DEBUG [94a525c0] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO [baca3784] Running /usr/bin/env git remote update --prune as www@morpheusliu.xyz
+ DEBUG [baca3784] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [baca3784] 	Fetching origin
+ DEBUG [baca3784] 	remote: Counting objects: 8, done.[K
+remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [K
+ DEBUG [baca3784] 	remote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [baca3784] 	remote: Total 8 (delta 5), reused 8 (delta 5), pack-reused 0[K
+ DEBUG [baca3784] 	
+ DEBUG [baca3784] 	Unpacking objects:  12% (1/8)   
+ DEBUG [baca3784] 	Unpacking objects:  25% (2/8)   
+ DEBUG [baca3784] 	Unpacking objects:  37% (3/8)   
+ DEBUG [baca3784] 	Unpacking objects:  50% (4/8)   
+ DEBUG [baca3784] 	Unpacking objects:  62% (5/8)   
+ DEBUG [baca3784] 	Unpacking objects:  75% (6/8)   
+ DEBUG [baca3784] 	Unpacking objects:  87% (7/8)   
+ DEBUG [baca3784] 	Unpacking objects: 100% (8/8)   Unpacking objects: 100% (8/8), done.
+ DEBUG [baca3784] 	From github.com:liu7899/morpheus
+ DEBUG [baca3784] 	
+ DEBUG [baca3784] 	   2aee50d..804b20d  master     -> master
+ DEBUG [baca3784] 	
+  INFO [baca3784] Finished in 4.675 seconds with exit status 0 (successful).
+ DEBUG [246d3440] Running if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [246d3440] Command: if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi
+ DEBUG [246d3440] Finished in 0.355 seconds with exit status 0 (successful).
+  INFO [2a9b7eb6] Running /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109032457 as www@morpheusliu.xyz
+ DEBUG [2a9b7eb6] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109032457 )
+  INFO [2a9b7eb6] Finished in 0.362 seconds with exit status 0 (successful).
+  INFO [d68ab9e6] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/www/morpheus/releases/20170109032457 as www@morpheusliu.xyz
+ DEBUG [d68ab9e6] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/www/morpheus/releases/20170109032457 )
+  INFO [d68ab9e6] Finished in 0.443 seconds with exit status 0 (successful).
+ DEBUG [0c2186de] Running if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [0c2186de] Command: if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi
+ DEBUG [0c2186de] Finished in 0.362 seconds with exit status 0 (successful).
+ DEBUG [3544200c] Running /usr/bin/env git rev-list --max-count=1 master as www@morpheusliu.xyz
+ DEBUG [3544200c] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3544200c] 	804b20d19db2953843d52d96b4b9ce30aa4f8854
+ DEBUG [3544200c] Finished in 0.358 seconds with exit status 0 (successful).
+ DEBUG [2e6361bf] Running if test ! -d /home/www/morpheus/releases/20170109032457; then echo "Directory does not exist '/home/www/morpheus/releases/20170109032457'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [2e6361bf] Command: if test ! -d /home/www/morpheus/releases/20170109032457; then echo "Directory does not exist '/home/www/morpheus/releases/20170109032457'" 1>&2; false; fi
+ DEBUG [2e6361bf] Finished in 0.362 seconds with exit status 0 (successful).
+  INFO [43c8f360] Running /usr/bin/env echo "804b20d19db2953843d52d96b4b9ce30aa4f8854" >> REVISION as www@morpheusliu.xyz
+ DEBUG [43c8f360] Command: cd /home/www/morpheus/releases/20170109032457 && /usr/bin/env echo "804b20d19db2953843d52d96b4b9ce30aa4f8854" >> REVISION
+  INFO [43c8f360] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO [1e038062] Running /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109032457/config as www@morpheusliu.xyz
+ DEBUG [1e038062] Command: /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109032457/config
+  INFO [1e038062] Finished in 0.352 seconds with exit status 0 (successful).
+ DEBUG [f7e334c8] Running [ -L /home/www/morpheus/releases/20170109032457/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [f7e334c8] Command: [ -L /home/www/morpheus/releases/20170109032457/config/database.yml ]
+ DEBUG [f7e334c8] Finished in 0.350 seconds with exit status 1 (failed).
+ DEBUG [4ad68c10] Running [ -f /home/www/morpheus/releases/20170109032457/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [4ad68c10] Command: [ -f /home/www/morpheus/releases/20170109032457/config/database.yml ]
+ DEBUG [4ad68c10] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO [e1003ab1] Running /usr/bin/env rm /home/www/morpheus/releases/20170109032457/config/database.yml as www@morpheusliu.xyz
+ DEBUG [e1003ab1] Command: /usr/bin/env rm /home/www/morpheus/releases/20170109032457/config/database.yml
+  INFO [e1003ab1] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO [30f107af] Running /usr/bin/env ln -s /home/www/morpheus/shared/config/database.yml /home/www/morpheus/releases/20170109032457/config/database.yml as www@morpheusliu.xyz
+ DEBUG [30f107af] Command: /usr/bin/env ln -s /home/www/morpheus/shared/config/database.yml /home/www/morpheus/releases/20170109032457/config/database.yml
+  INFO [30f107af] Finished in 0.362 seconds with exit status 0 (successful).
+ DEBUG [1cc0ed82] Running [ -L /home/www/morpheus/releases/20170109032457/config/secrets.yml ] as www@morpheusliu.xyz
+ DEBUG [1cc0ed82] Command: [ -L /home/www/morpheus/releases/20170109032457/config/secrets.yml ]
+ DEBUG [1cc0ed82] Finished in 0.352 seconds with exit status 1 (failed).
+ DEBUG [53a5e970] Running [ -f /home/www/morpheus/releases/20170109032457/config/secrets.yml ] as www@morpheusliu.xyz
+ DEBUG [53a5e970] Command: [ -f /home/www/morpheus/releases/20170109032457/config/secrets.yml ]
+ DEBUG [53a5e970] Finished in 0.361 seconds with exit status 0 (successful).
+  INFO [629a2379] Running /usr/bin/env rm /home/www/morpheus/releases/20170109032457/config/secrets.yml as www@morpheusliu.xyz
+ DEBUG [629a2379] Command: /usr/bin/env rm /home/www/morpheus/releases/20170109032457/config/secrets.yml
+  INFO [629a2379] Finished in 0.362 seconds with exit status 0 (successful).
+  INFO [0ad80b4d] Running /usr/bin/env ln -s /home/www/morpheus/shared/config/secrets.yml /home/www/morpheus/releases/20170109032457/config/secrets.yml as www@morpheusliu.xyz
+ DEBUG [0ad80b4d] Command: /usr/bin/env ln -s /home/www/morpheus/shared/config/secrets.yml /home/www/morpheus/releases/20170109032457/config/secrets.yml
+  INFO [0ad80b4d] Finished in 0.351 seconds with exit status 0 (successful).
+ DEBUG [77286a47] Running [ -L /home/www/morpheus/releases/20170109032457/config/settings.yml ] as www@morpheusliu.xyz
+ DEBUG [77286a47] Command: [ -L /home/www/morpheus/releases/20170109032457/config/settings.yml ]
+ DEBUG [77286a47] Finished in 0.351 seconds with exit status 1 (failed).
+ DEBUG [1d0a3bf4] Running [ -f /home/www/morpheus/releases/20170109032457/config/settings.yml ] as www@morpheusliu.xyz
+ DEBUG [1d0a3bf4] Command: [ -f /home/www/morpheus/releases/20170109032457/config/settings.yml ]
+ DEBUG [1d0a3bf4] Finished in 0.357 seconds with exit status 0 (successful).
+  INFO [f66e99e7] Running /usr/bin/env rm /home/www/morpheus/releases/20170109032457/config/settings.yml as www@morpheusliu.xyz
+ DEBUG [f66e99e7] Command: /usr/bin/env rm /home/www/morpheus/releases/20170109032457/config/settings.yml
+  INFO [f66e99e7] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO [19511369] Running /usr/bin/env ln -s /home/www/morpheus/shared/config/settings.yml /home/www/morpheus/releases/20170109032457/config/settings.yml as www@morpheusliu.xyz
+ DEBUG [19511369] Command: /usr/bin/env ln -s /home/www/morpheus/shared/config/settings.yml /home/www/morpheus/releases/20170109032457/config/settings.yml
+  INFO [19511369] Finished in 0.354 seconds with exit status 0 (successful).
+  INFO [964e6ec5] Running /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109032457 /home/www/morpheus/releases/20170109032457/tmp /home/www/morpheus/releases/20170109032457/public as www@morpheusliu.xyz
+ DEBUG [964e6ec5] Command: /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109032457 /home/www/morpheus/releases/20170109032457/tmp /home/www/morpheus/releases/20170109032457/public
+  INFO [964e6ec5] Finished in 0.351 seconds with exit status 0 (successful).
+ DEBUG [b9d7b3e7] Running [ -L /home/www/morpheus/releases/20170109032457/log ] as www@morpheusliu.xyz
+ DEBUG [b9d7b3e7] Command: [ -L /home/www/morpheus/releases/20170109032457/log ]
+ DEBUG [b9d7b3e7] Finished in 0.352 seconds with exit status 1 (failed).
+ DEBUG [f7b5a44c] Running [ -d /home/www/morpheus/releases/20170109032457/log ] as www@morpheusliu.xyz
+ DEBUG [f7b5a44c] Command: [ -d /home/www/morpheus/releases/20170109032457/log ]
+ DEBUG [f7b5a44c] Finished in 0.351 seconds with exit status 0 (successful).
+  INFO [a8b7fcb9] Running /usr/bin/env rm -rf /home/www/morpheus/releases/20170109032457/log as www@morpheusliu.xyz
+ DEBUG [a8b7fcb9] Command: /usr/bin/env rm -rf /home/www/morpheus/releases/20170109032457/log
+  INFO [a8b7fcb9] Finished in 0.355 seconds with exit status 0 (successful).
+  INFO [9295c85b] Running /usr/bin/env ln -s /home/www/morpheus/shared/log /home/www/morpheus/releases/20170109032457/log as www@morpheusliu.xyz
+ DEBUG [9295c85b] Command: /usr/bin/env ln -s /home/www/morpheus/shared/log /home/www/morpheus/releases/20170109032457/log
+  INFO [9295c85b] Finished in 0.354 seconds with exit status 0 (successful).
+ DEBUG [bb080d31] Running [ -L /home/www/morpheus/releases/20170109032457/tmp/pids ] as www@morpheusliu.xyz
+ DEBUG [bb080d31] Command: [ -L /home/www/morpheus/releases/20170109032457/tmp/pids ]
+ DEBUG [bb080d31] Finished in 0.350 seconds with exit status 1 (failed).
+ DEBUG [01a2d3b1] Running [ -d /home/www/morpheus/releases/20170109032457/tmp/pids ] as www@morpheusliu.xyz
+ DEBUG [01a2d3b1] Command: [ -d /home/www/morpheus/releases/20170109032457/tmp/pids ]
+ DEBUG [01a2d3b1] Finished in 0.350 seconds with exit status 0 (successful).
+  INFO [5f613ff4] Running /usr/bin/env rm -rf /home/www/morpheus/releases/20170109032457/tmp/pids as www@morpheusliu.xyz
+ DEBUG [5f613ff4] Command: /usr/bin/env rm -rf /home/www/morpheus/releases/20170109032457/tmp/pids
+  INFO [5f613ff4] Finished in 0.352 seconds with exit status 0 (successful).
+  INFO [7f9fc1de] Running /usr/bin/env ln -s /home/www/morpheus/shared/tmp/pids /home/www/morpheus/releases/20170109032457/tmp/pids as www@morpheusliu.xyz
+ DEBUG [7f9fc1de] Command: /usr/bin/env ln -s /home/www/morpheus/shared/tmp/pids /home/www/morpheus/releases/20170109032457/tmp/pids
+  INFO [7f9fc1de] Finished in 0.350 seconds with exit status 0 (successful).
+ DEBUG [c75699c8] Running [ -L /home/www/morpheus/releases/20170109032457/tmp/cache ] as www@morpheusliu.xyz
+ DEBUG [c75699c8] Command: [ -L /home/www/morpheus/releases/20170109032457/tmp/cache ]
+ DEBUG [c75699c8] Finished in 0.354 seconds with exit status 1 (failed).
+ DEBUG [d8fa25df] Running [ -d /home/www/morpheus/releases/20170109032457/tmp/cache ] as www@morpheusliu.xyz
+ DEBUG [d8fa25df] Command: [ -d /home/www/morpheus/releases/20170109032457/tmp/cache ]
+ DEBUG [d8fa25df] Finished in 0.350 seconds with exit status 1 (failed).
+  INFO [24b23cf2] Running /usr/bin/env ln -s /home/www/morpheus/shared/tmp/cache /home/www/morpheus/releases/20170109032457/tmp/cache as www@morpheusliu.xyz
+ DEBUG [24b23cf2] Command: /usr/bin/env ln -s /home/www/morpheus/shared/tmp/cache /home/www/morpheus/releases/20170109032457/tmp/cache
+  INFO [24b23cf2] Finished in 0.355 seconds with exit status 0 (successful).
+ DEBUG [04a49a1f] Running [ -L /home/www/morpheus/releases/20170109032457/tmp/sockets ] as www@morpheusliu.xyz
+ DEBUG [04a49a1f] Command: [ -L /home/www/morpheus/releases/20170109032457/tmp/sockets ]
+ DEBUG [04a49a1f] Finished in 0.351 seconds with exit status 1 (failed).
+ DEBUG [0f246faf] Running [ -d /home/www/morpheus/releases/20170109032457/tmp/sockets ] as www@morpheusliu.xyz
+ DEBUG [0f246faf] Command: [ -d /home/www/morpheus/releases/20170109032457/tmp/sockets ]
+ DEBUG [0f246faf] Finished in 0.356 seconds with exit status 1 (failed).
+  INFO [f922cac1] Running /usr/bin/env ln -s /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/releases/20170109032457/tmp/sockets as www@morpheusliu.xyz
+ DEBUG [f922cac1] Command: /usr/bin/env ln -s /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/releases/20170109032457/tmp/sockets
+  INFO [f922cac1] Finished in 0.356 seconds with exit status 0 (successful).
+ DEBUG [2cd3088e] Running [ -L /home/www/morpheus/releases/20170109032457/public/system ] as www@morpheusliu.xyz
+ DEBUG [2cd3088e] Command: [ -L /home/www/morpheus/releases/20170109032457/public/system ]
+ DEBUG [2cd3088e] Finished in 0.352 seconds with exit status 1 (failed).
+ DEBUG [83c89436] Running [ -d /home/www/morpheus/releases/20170109032457/public/system ] as www@morpheusliu.xyz
+ DEBUG [83c89436] Command: [ -d /home/www/morpheus/releases/20170109032457/public/system ]
+ DEBUG [83c89436] Finished in 0.349 seconds with exit status 1 (failed).
+  INFO [0216637d] Running /usr/bin/env ln -s /home/www/morpheus/shared/public/system /home/www/morpheus/releases/20170109032457/public/system as www@morpheusliu.xyz
+ DEBUG [0216637d] Command: /usr/bin/env ln -s /home/www/morpheus/shared/public/system /home/www/morpheus/releases/20170109032457/public/system
+  INFO [0216637d] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO [53277761] Running /usr/bin/env ln -s /home/www/morpheus/releases/20170109032457 /home/www/morpheus/releases/current as www@morpheusliu.xyz
+ DEBUG [53277761] Command: /usr/bin/env ln -s /home/www/morpheus/releases/20170109032457 /home/www/morpheus/releases/current
+  INFO [53277761] Finished in 0.354 seconds with exit status 0 (successful).
+  INFO [78b27b7e] Running /usr/bin/env mv /home/www/morpheus/releases/current /home/www/morpheus as www@morpheusliu.xyz
+ DEBUG [78b27b7e] Command: /usr/bin/env mv /home/www/morpheus/releases/current /home/www/morpheus
+  INFO [78b27b7e] Finished in 0.358 seconds with exit status 0 (successful).
+ DEBUG [55f5f171] Running /usr/bin/env ls -x /home/www/morpheus/releases as www@morpheusliu.xyz
+ DEBUG [55f5f171] Command: /usr/bin/env ls -x /home/www/morpheus/releases
+ DEBUG [55f5f171] 	20170107015147	20170107101533	20170109032457
+ DEBUG [55f5f171] Finished in 0.362 seconds with exit status 0 (successful).
+ DEBUG [7d4ed120] Running if test ! -d /home/www/morpheus/releases; then echo "Directory does not exist '/home/www/morpheus/releases'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [7d4ed120] Command: if test ! -d /home/www/morpheus/releases; then echo "Directory does not exist '/home/www/morpheus/releases'" 1>&2; false; fi
+ DEBUG [7d4ed120] Finished in 0.352 seconds with exit status 0 (successful).
+  INFO [c30b5c73] Running /usr/bin/env echo "Branch master (at 804b20d19db2953843d52d96b4b9ce30aa4f8854) deployed as release 20170109032457 by liu" >> /home/www/morpheus/revisions.log as www@morpheusliu.xyz
+ DEBUG [c30b5c73] Command: cd /home/www/morpheus/releases && /usr/bin/env echo "Branch master (at 804b20d19db2953843d52d96b4b9ce30aa4f8854) deployed as release 20170109032457 by liu" >> /home/www/morpheus/revisions.log
+  INFO [c30b5c73] Finished in 0.353 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-09 14:02:37 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e4d6b894] Running /usr/bin/env mkdir -p /tmp as www@morpheusliu.xyz
+ DEBUG [e4d6b894] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e4d6b894] Finished in 13.564 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-morpheus-production-liu.sh 0.0%
+  INFO Uploading /tmp/git-ssh-morpheus-production-liu.sh 100.0%
+  INFO [c32ca0a1] Running /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh as www@morpheusliu.xyz
+ DEBUG [c32ca0a1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-morpheus-production-liu.sh
+  INFO [c32ca0a1] Finished in 0.462 seconds with exit status 0 (successful).
+  INFO [b2e909c7] Running /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git as www@morpheusliu.xyz
+ DEBUG [b2e909c7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git ls-remote --heads git@github.com:liu7899/morpheus.git )
+ DEBUG [b2e909c7] 	2f736b4df4df5900bdf885fc699326ad2c4652e6	refs/heads/master
+  INFO [b2e909c7] Finished in 9.375 seconds with exit status 0 (successful).
+  INFO [ae2ee67a] Running /usr/bin/env mkdir -p /home/www/morpheus/shared /home/www/morpheus/releases as www@morpheusliu.xyz
+ DEBUG [ae2ee67a] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared /home/www/morpheus/releases
+  INFO [ae2ee67a] Finished in 0.585 seconds with exit status 0 (successful).
+  INFO [316bdf93] Running /usr/bin/env mkdir -p /home/www/morpheus/shared/log /home/www/morpheus/shared/tmp/pids /home/www/morpheus/shared/tmp/cache /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/shared/public/system as www@morpheusliu.xyz
+ DEBUG [316bdf93] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared/log /home/www/morpheus/shared/tmp/pids /home/www/morpheus/shared/tmp/cache /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/shared/public/system
+  INFO [316bdf93] Finished in 0.597 seconds with exit status 0 (successful).
+  INFO [1c97670b] Running /usr/bin/env mkdir -p /home/www/morpheus/shared/config as www@morpheusliu.xyz
+ DEBUG [1c97670b] Command: /usr/bin/env mkdir -p /home/www/morpheus/shared/config
+  INFO [1c97670b] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG [a282a9e8] Running [ -f /home/www/morpheus/shared/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [a282a9e8] Command: [ -f /home/www/morpheus/shared/config/database.yml ]
+ DEBUG [a282a9e8] Finished in 0.590 seconds with exit status 0 (successful).
+ DEBUG [2ff2408f] Running [ -f /home/www/morpheus/shared/config/secrets.yml ] as www@morpheusliu.xyz
+ DEBUG [2ff2408f] Command: [ -f /home/www/morpheus/shared/config/secrets.yml ]
+ DEBUG [2ff2408f] Finished in 0.601 seconds with exit status 0 (successful).
+ DEBUG [3e03bc28] Running [ -f /home/www/morpheus/shared/config/settings.yml ] as www@morpheusliu.xyz
+ DEBUG [3e03bc28] Command: [ -f /home/www/morpheus/shared/config/settings.yml ]
+ DEBUG [3e03bc28] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [5d3893a6] Running [ -f /home/www/morpheus/current/REVISION ] as www@morpheusliu.xyz
+ DEBUG [5d3893a6] Command: [ -f /home/www/morpheus/current/REVISION ]
+ DEBUG [5d3893a6] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [a788ef73] Running /usr/bin/env cat /home/www/morpheus/current/REVISION 2>/dev/null as www@morpheusliu.xyz
+ DEBUG [a788ef73] Command: /usr/bin/env cat /home/www/morpheus/current/REVISION 2>/dev/null
+ DEBUG [a788ef73] 	804b20d19db2953843d52d96b4b9ce30aa4f8854
+ DEBUG [a788ef73] Finished in 0.578 seconds with exit status 0 (successful).
+ DEBUG [20c82a0b] Running [ -f /home/www/morpheus/repo/HEAD ] as www@morpheusliu.xyz
+ DEBUG [20c82a0b] Command: [ -f /home/www/morpheus/repo/HEAD ]
+ DEBUG [20c82a0b] Finished in 1.165 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/www/morpheus/repo
+ DEBUG [fcda4f09] Running if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [fcda4f09] Command: if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi
+ DEBUG [fcda4f09] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [5a10bd94] Running /usr/bin/env git remote update --prune as www@morpheusliu.xyz
+ DEBUG [5a10bd94] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5a10bd94] 	Fetching origin
+ DEBUG [5a10bd94] 	
+ DEBUG [5a10bd94] 	remote: Counting objects: 6, done.[K
+remote: Compressing objects: 100% (1/1)   [Kremote: Compressing objects: 100% (1/1), done.[K
+remote: Total 6 (delta 5), reused 6 (delta 5), pack-reused 0[K
+ DEBUG [5a10bd94] 	Unpacking objects:  16% (1/6)   
+ DEBUG [5a10bd94] 	Unpacking objects:  33% (2/6)   
+ DEBUG [5a10bd94] 	Unpacking objects:  50% (3/6)   
+ DEBUG [5a10bd94] 	Unpacking objects:  66% (4/6)   
+ DEBUG [5a10bd94] 	Unpacking objects:  83% (5/6)   
+ DEBUG [5a10bd94] 	Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+ DEBUG [5a10bd94] 	From github.com:liu7899/morpheus
+ DEBUG [5a10bd94] 	
+ DEBUG [5a10bd94] 	   804b20d..2f736b4  master     -> master
+ DEBUG [5a10bd94] 	
+  INFO [5a10bd94] Finished in 4.988 seconds with exit status 0 (successful).
+ DEBUG [4f951091] Running if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [4f951091] Command: if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi
+ DEBUG [4f951091] Finished in 0.464 seconds with exit status 0 (successful).
+  INFO [526afe1e] Running /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109060501 as www@morpheusliu.xyz
+ DEBUG [526afe1e] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109060501 )
+  INFO [526afe1e] Finished in 0.480 seconds with exit status 0 (successful).
+  INFO [0eb63598] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/www/morpheus/releases/20170109060501 as www@morpheusliu.xyz
+ DEBUG [0eb63598] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/www/morpheus/releases/20170109060501 )
+  INFO [0eb63598] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [ec381bf0] Running if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [ec381bf0] Command: if test ! -d /home/www/morpheus/repo; then echo "Directory does not exist '/home/www/morpheus/repo'" 1>&2; false; fi
+ DEBUG [ec381bf0] Finished in 0.476 seconds with exit status 0 (successful).
+ DEBUG [1e1f54a9] Running /usr/bin/env git rev-list --max-count=1 master as www@morpheusliu.xyz
+ DEBUG [1e1f54a9] Command: cd /home/www/morpheus/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-morpheus-production-liu.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1e1f54a9] 	2f736b4df4df5900bdf885fc699326ad2c4652e6
+ DEBUG [1e1f54a9] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG [198b0e73] Running if test ! -d /home/www/morpheus/releases/20170109060501; then echo "Directory does not exist '/home/www/morpheus/releases/20170109060501'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [198b0e73] Command: if test ! -d /home/www/morpheus/releases/20170109060501; then echo "Directory does not exist '/home/www/morpheus/releases/20170109060501'" 1>&2; false; fi
+ DEBUG [198b0e73] Finished in 0.440 seconds with exit status 0 (successful).
+  INFO [0a8060ed] Running /usr/bin/env echo "2f736b4df4df5900bdf885fc699326ad2c4652e6" >> REVISION as www@morpheusliu.xyz
+ DEBUG [0a8060ed] Command: cd /home/www/morpheus/releases/20170109060501 && /usr/bin/env echo "2f736b4df4df5900bdf885fc699326ad2c4652e6" >> REVISION
+  INFO [0a8060ed] Finished in 0.486 seconds with exit status 0 (successful).
+  INFO [ee6e62cf] Running /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109060501/config as www@morpheusliu.xyz
+ DEBUG [ee6e62cf] Command: /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109060501/config
+  INFO [ee6e62cf] Finished in 0.479 seconds with exit status 0 (successful).
+ DEBUG [6cf16678] Running [ -L /home/www/morpheus/releases/20170109060501/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [6cf16678] Command: [ -L /home/www/morpheus/releases/20170109060501/config/database.yml ]
+ DEBUG [6cf16678] Finished in 0.481 seconds with exit status 1 (failed).
+ DEBUG [d79257fc] Running [ -f /home/www/morpheus/releases/20170109060501/config/database.yml ] as www@morpheusliu.xyz
+ DEBUG [d79257fc] Command: [ -f /home/www/morpheus/releases/20170109060501/config/database.yml ]
+ DEBUG [d79257fc] Finished in 0.450 seconds with exit status 0 (successful).
+  INFO [36c33ac6] Running /usr/bin/env rm /home/www/morpheus/releases/20170109060501/config/database.yml as www@morpheusliu.xyz
+ DEBUG [36c33ac6] Command: /usr/bin/env rm /home/www/morpheus/releases/20170109060501/config/database.yml
+  INFO [36c33ac6] Finished in 0.455 seconds with exit status 0 (successful).
+  INFO [98651695] Running /usr/bin/env ln -s /home/www/morpheus/shared/config/database.yml /home/www/morpheus/releases/20170109060501/config/database.yml as www@morpheusliu.xyz
+ DEBUG [98651695] Command: /usr/bin/env ln -s /home/www/morpheus/shared/config/database.yml /home/www/morpheus/releases/20170109060501/config/database.yml
+  INFO [98651695] Finished in 0.468 seconds with exit status 0 (successful).
+ DEBUG [4dc6eb7c] Running [ -L /home/www/morpheus/releases/20170109060501/config/secrets.yml ] as www@morpheusliu.xyz
+ DEBUG [4dc6eb7c] Command: [ -L /home/www/morpheus/releases/20170109060501/config/secrets.yml ]
+ DEBUG [4dc6eb7c] Finished in 0.466 seconds with exit status 1 (failed).
+ DEBUG [cfd6b69e] Running [ -f /home/www/morpheus/releases/20170109060501/config/secrets.yml ] as www@morpheusliu.xyz
+ DEBUG [cfd6b69e] Command: [ -f /home/www/morpheus/releases/20170109060501/config/secrets.yml ]
+ DEBUG [cfd6b69e] Finished in 0.472 seconds with exit status 0 (successful).
+  INFO [d583ae3f] Running /usr/bin/env rm /home/www/morpheus/releases/20170109060501/config/secrets.yml as www@morpheusliu.xyz
+ DEBUG [d583ae3f] Command: /usr/bin/env rm /home/www/morpheus/releases/20170109060501/config/secrets.yml
+  INFO [d583ae3f] Finished in 0.456 seconds with exit status 0 (successful).
+  INFO [ab70d358] Running /usr/bin/env ln -s /home/www/morpheus/shared/config/secrets.yml /home/www/morpheus/releases/20170109060501/config/secrets.yml as www@morpheusliu.xyz
+ DEBUG [ab70d358] Command: /usr/bin/env ln -s /home/www/morpheus/shared/config/secrets.yml /home/www/morpheus/releases/20170109060501/config/secrets.yml
+  INFO [ab70d358] Finished in 0.456 seconds with exit status 0 (successful).
+ DEBUG [895aff9d] Running [ -L /home/www/morpheus/releases/20170109060501/config/settings.yml ] as www@morpheusliu.xyz
+ DEBUG [895aff9d] Command: [ -L /home/www/morpheus/releases/20170109060501/config/settings.yml ]
+ DEBUG [895aff9d] Finished in 0.472 seconds with exit status 1 (failed).
+ DEBUG [686f103f] Running [ -f /home/www/morpheus/releases/20170109060501/config/settings.yml ] as www@morpheusliu.xyz
+ DEBUG [686f103f] Command: [ -f /home/www/morpheus/releases/20170109060501/config/settings.yml ]
+ DEBUG [686f103f] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [db9112e8] Running /usr/bin/env rm /home/www/morpheus/releases/20170109060501/config/settings.yml as www@morpheusliu.xyz
+ DEBUG [db9112e8] Command: /usr/bin/env rm /home/www/morpheus/releases/20170109060501/config/settings.yml
+  INFO [db9112e8] Finished in 0.456 seconds with exit status 0 (successful).
+  INFO [d13f1b3f] Running /usr/bin/env ln -s /home/www/morpheus/shared/config/settings.yml /home/www/morpheus/releases/20170109060501/config/settings.yml as www@morpheusliu.xyz
+ DEBUG [d13f1b3f] Command: /usr/bin/env ln -s /home/www/morpheus/shared/config/settings.yml /home/www/morpheus/releases/20170109060501/config/settings.yml
+  INFO [d13f1b3f] Finished in 0.467 seconds with exit status 0 (successful).
+  INFO [6549bd96] Running /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109060501 /home/www/morpheus/releases/20170109060501/tmp /home/www/morpheus/releases/20170109060501/public as www@morpheusliu.xyz
+ DEBUG [6549bd96] Command: /usr/bin/env mkdir -p /home/www/morpheus/releases/20170109060501 /home/www/morpheus/releases/20170109060501/tmp /home/www/morpheus/releases/20170109060501/public
+  INFO [6549bd96] Finished in 0.477 seconds with exit status 0 (successful).
+ DEBUG [b7a60036] Running [ -L /home/www/morpheus/releases/20170109060501/log ] as www@morpheusliu.xyz
+ DEBUG [b7a60036] Command: [ -L /home/www/morpheus/releases/20170109060501/log ]
+ DEBUG [b7a60036] Finished in 0.474 seconds with exit status 1 (failed).
+ DEBUG [6fb2ef02] Running [ -d /home/www/morpheus/releases/20170109060501/log ] as www@morpheusliu.xyz
+ DEBUG [6fb2ef02] Command: [ -d /home/www/morpheus/releases/20170109060501/log ]
+ DEBUG [6fb2ef02] Finished in 0.431 seconds with exit status 0 (successful).
+  INFO [8215f7a9] Running /usr/bin/env rm -rf /home/www/morpheus/releases/20170109060501/log as www@morpheusliu.xyz
+ DEBUG [8215f7a9] Command: /usr/bin/env rm -rf /home/www/morpheus/releases/20170109060501/log
+  INFO [8215f7a9] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [be497360] Running /usr/bin/env ln -s /home/www/morpheus/shared/log /home/www/morpheus/releases/20170109060501/log as www@morpheusliu.xyz
+ DEBUG [be497360] Command: /usr/bin/env ln -s /home/www/morpheus/shared/log /home/www/morpheus/releases/20170109060501/log
+  INFO [be497360] Finished in 0.456 seconds with exit status 0 (successful).
+ DEBUG [b9322b5d] Running [ -L /home/www/morpheus/releases/20170109060501/tmp/pids ] as www@morpheusliu.xyz
+ DEBUG [b9322b5d] Command: [ -L /home/www/morpheus/releases/20170109060501/tmp/pids ]
+ DEBUG [b9322b5d] Finished in 0.478 seconds with exit status 1 (failed).
+ DEBUG [f3128424] Running [ -d /home/www/morpheus/releases/20170109060501/tmp/pids ] as www@morpheusliu.xyz
+ DEBUG [f3128424] Command: [ -d /home/www/morpheus/releases/20170109060501/tmp/pids ]
+ DEBUG [f3128424] Finished in 0.467 seconds with exit status 0 (successful).
+  INFO [a9606e96] Running /usr/bin/env rm -rf /home/www/morpheus/releases/20170109060501/tmp/pids as www@morpheusliu.xyz
+ DEBUG [a9606e96] Command: /usr/bin/env rm -rf /home/www/morpheus/releases/20170109060501/tmp/pids
+  INFO [a9606e96] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [41a7cd6c] Running /usr/bin/env ln -s /home/www/morpheus/shared/tmp/pids /home/www/morpheus/releases/20170109060501/tmp/pids as www@morpheusliu.xyz
+ DEBUG [41a7cd6c] Command: /usr/bin/env ln -s /home/www/morpheus/shared/tmp/pids /home/www/morpheus/releases/20170109060501/tmp/pids
+  INFO [41a7cd6c] Finished in 0.478 seconds with exit status 0 (successful).
+ DEBUG [e8a3d655] Running [ -L /home/www/morpheus/releases/20170109060501/tmp/cache ] as www@morpheusliu.xyz
+ DEBUG [e8a3d655] Command: [ -L /home/www/morpheus/releases/20170109060501/tmp/cache ]
+ DEBUG [e8a3d655] Finished in 0.468 seconds with exit status 1 (failed).
+ DEBUG [99816cf3] Running [ -d /home/www/morpheus/releases/20170109060501/tmp/cache ] as www@morpheusliu.xyz
+ DEBUG [99816cf3] Command: [ -d /home/www/morpheus/releases/20170109060501/tmp/cache ]
+ DEBUG [99816cf3] Finished in 0.468 seconds with exit status 1 (failed).
+  INFO [489d7e61] Running /usr/bin/env ln -s /home/www/morpheus/shared/tmp/cache /home/www/morpheus/releases/20170109060501/tmp/cache as www@morpheusliu.xyz
+ DEBUG [489d7e61] Command: /usr/bin/env ln -s /home/www/morpheus/shared/tmp/cache /home/www/morpheus/releases/20170109060501/tmp/cache
+  INFO [489d7e61] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [d1145966] Running [ -L /home/www/morpheus/releases/20170109060501/tmp/sockets ] as www@morpheusliu.xyz
+ DEBUG [d1145966] Command: [ -L /home/www/morpheus/releases/20170109060501/tmp/sockets ]
+ DEBUG [d1145966] Finished in 0.446 seconds with exit status 1 (failed).
+ DEBUG [02abb935] Running [ -d /home/www/morpheus/releases/20170109060501/tmp/sockets ] as www@morpheusliu.xyz
+ DEBUG [02abb935] Command: [ -d /home/www/morpheus/releases/20170109060501/tmp/sockets ]
+ DEBUG [02abb935] Finished in 0.449 seconds with exit status 1 (failed).
+  INFO [febdea4b] Running /usr/bin/env ln -s /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/releases/20170109060501/tmp/sockets as www@morpheusliu.xyz
+ DEBUG [febdea4b] Command: /usr/bin/env ln -s /home/www/morpheus/shared/tmp/sockets /home/www/morpheus/releases/20170109060501/tmp/sockets
+  INFO [febdea4b] Finished in 0.473 seconds with exit status 0 (successful).
+ DEBUG [92eac100] Running [ -L /home/www/morpheus/releases/20170109060501/public/system ] as www@morpheusliu.xyz
+ DEBUG [92eac100] Command: [ -L /home/www/morpheus/releases/20170109060501/public/system ]
+ DEBUG [92eac100] Finished in 0.467 seconds with exit status 1 (failed).
+ DEBUG [e875cd37] Running [ -d /home/www/morpheus/releases/20170109060501/public/system ] as www@morpheusliu.xyz
+ DEBUG [e875cd37] Command: [ -d /home/www/morpheus/releases/20170109060501/public/system ]
+ DEBUG [e875cd37] Finished in 0.467 seconds with exit status 1 (failed).
+  INFO [2a850810] Running /usr/bin/env ln -s /home/www/morpheus/shared/public/system /home/www/morpheus/releases/20170109060501/public/system as www@morpheusliu.xyz
+ DEBUG [2a850810] Command: /usr/bin/env ln -s /home/www/morpheus/shared/public/system /home/www/morpheus/releases/20170109060501/public/system
+  INFO [2a850810] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [86b4eb5c] Running /usr/bin/env ln -s /home/www/morpheus/releases/20170109060501 /home/www/morpheus/releases/current as www@morpheusliu.xyz
+ DEBUG [86b4eb5c] Command: /usr/bin/env ln -s /home/www/morpheus/releases/20170109060501 /home/www/morpheus/releases/current
+  INFO [86b4eb5c] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [7dc3464a] Running /usr/bin/env mv /home/www/morpheus/releases/current /home/www/morpheus as www@morpheusliu.xyz
+ DEBUG [7dc3464a] Command: /usr/bin/env mv /home/www/morpheus/releases/current /home/www/morpheus
+  INFO [7dc3464a] Finished in 0.466 seconds with exit status 0 (successful).
+ DEBUG [f44e07cd] Running /usr/bin/env ls -x /home/www/morpheus/releases as www@morpheusliu.xyz
+ DEBUG [f44e07cd] Command: /usr/bin/env ls -x /home/www/morpheus/releases
+ DEBUG [f44e07cd] 	20170107015147	20170107101533	20170109032457	20170109060501
+ DEBUG [f44e07cd] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG [fd89bc9c] Running if test ! -d /home/www/morpheus/releases; then echo "Directory does not exist '/home/www/morpheus/releases'" 1>&2; false; fi as www@morpheusliu.xyz
+ DEBUG [fd89bc9c] Command: if test ! -d /home/www/morpheus/releases; then echo "Directory does not exist '/home/www/morpheus/releases'" 1>&2; false; fi
+ DEBUG [fd89bc9c] Finished in 0.462 seconds with exit status 0 (successful).
+  INFO [c5571bce] Running /usr/bin/env echo "Branch master (at 2f736b4df4df5900bdf885fc699326ad2c4652e6) deployed as release 20170109060501 by liu" >> /home/www/morpheus/revisions.log as www@morpheusliu.xyz
+ DEBUG [c5571bce] Command: cd /home/www/morpheus/releases && /usr/bin/env echo "Branch master (at 2f736b4df4df5900bdf885fc699326ad2c4652e6) deployed as release 20170109060501 by liu" >> /home/www/morpheus/revisions.log
+  INFO [c5571bce] Finished in 0.462 seconds with exit status 0 (successful).
