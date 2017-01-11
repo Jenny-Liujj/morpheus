@@ -14,6 +14,7 @@ gem 'config'
 gem 'devise'
 gem 'execjs'
 gem 'therubyracer', platforms: :ruby
+gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'byebug', platform: :mri
