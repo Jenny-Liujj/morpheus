@@ -1,4 +1,4 @@
-server 'morpheusliu.xyz',
+server '139.162.127.5',
   user: fetch(:deploy_user),
   roles: %w{app db web},
   ssh_options: { forward_agent: true }
