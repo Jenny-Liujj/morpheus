@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   def work_test
+    puts "1"*123
   end
 end
